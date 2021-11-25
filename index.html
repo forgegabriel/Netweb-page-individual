@@ -10,14 +10,82 @@
 </head>
 
 <body>
-    <header>
-        <div><img src="images/Ellipse 13.png"></div>
-        <div><h1>Controle Financeiro</h1></div>
-        <div><img src="images/Shape.png"></div>
-    </header>
+    <div class="conteudo-principal">
+        <header>
+            <div><img src="images/Ellipse 13.png"></div>
+            <div>
+                <h1>Controle Financeiro</h1>
+            </div>
+            <div><img src="images/Shape.png"></div>
+        </header>
 
-    
+        <div class="espaco-lateral">
 
+            <form>
+                <!-- Tipo de transação -->
+                <div class="espaco-vertical">
+                    <label for="tran-tipo">Tipo de transação</label>
+                    <select id="tran-tipo" name="tran-tipo" required>
+                        <option value="tipo-compra">Compra</option>
+                        <option value="tipo-venda">Venda</option>
+                    </select>
+                </div>
+
+                <!-- Nome da mercadoria -->
+                <div class="espaco-vertical">
+                    <label for="tran-nome">Nome da mercadoria</label>
+                    <input type="text" id="tran-nome" name="tran-nome" placeholder="Input" required>
+                </div>
+
+                <!-- Valor -->
+                <div class="espaco-vertical">
+                    <label for="tran-valor">Valor</label>
+                    <input type="number" id="tran-valor" name="tran-valor" placeholder="R$ 0,00" required>
+                </div>
+
+                <input type="submit" class="espaco-vertical" value="Adicionar transação">
+                <hr>
+            </form>
+
+            <div id="extrato" class="espaco-vertical">
+                <h2>Extrato de transações</h2>
+                <table style="border-spacing: 10px;">
+                    <tr>
+                        <th></th>
+                        <th>Mercadoria</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Lorem ipsum dolor sit amet consectetur</td>
+                        <td>R$ 12.999,99</td>
+                    </tr>
+
+                    <tr>
+                        <td>-</td>
+                        <td>Quis nostrud exercitation</td>
+                        <td>R$ 99,99</td>
+                    </tr>
+
+                    <tr>
+                        <td>+</td>
+                        <td>Lorem ipsum </td>
+                        <td>R$ 9,99</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Total</td>
+                        <td>R$ 12.909,99
+                            <span>[lucro]</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <footer></footer>
 </body>
 
 </html>

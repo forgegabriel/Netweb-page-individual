@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+:root {
+    --cor-principal: #fff;
+    --cor-secundaria: #333333;
+    --cor-detalhe: #979797;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+}
+
+.conteudo-principal {
+    height: 100%;
+    position: relative;
 }
 
 header {
@@ -28,4 +39,91 @@ header div:last-child {
 
 header div:last-child>img {
     width: 20px;
+}
+
+.espaco-lateral {
+    margin: 0 20px;
+}
+
+.espaco-vertical {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Modificações no formulário  */
+form [id|="tran"] {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid var(--cor-detalhe);
+    border-radius: 4px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    font-size: 14px;
+}
+
+form hr {
+    margin-top: 28px;
+}
+
+#extrato h2 {
+    padding: 21px 0 19px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#extrato tr {
+    border-bottom: 1px solid var(--cor-detalhe);
+}
+
+#extrato tr:last-child {
+    border-bottom: none;
+    border-top: 4px double var(--cor-detalhe);
+    font-weight: 700;
+}
+
+#extrato tr:last-child span {
+    font-weight: 400;
+}
+
+#extrato th:nth-child(2) {
+    text-align: left;
+}
+
+#extrato td:last-child {
+    padding-right: 10px;
+    text-align: right;
+}
+
+#extrato td, #extrato th {
+    padding: 8px 0px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+#extrato td:first-child {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--cor-secundaria);
+    height: 8px;
+    width: 100%;
 }
