@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E0E0E0;
+}
+
+header div:first-child {
+    padding: 13px 22px;
+}
+
+header>div>h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header div:last-child {
+    padding: 15px 22px;
+}
+
+
+header div:last-child>img {
+    width: 20px;
+}
