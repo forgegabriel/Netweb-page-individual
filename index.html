@@ -16,11 +16,11 @@
             <div>
                 <h1>Controle Financeiro</h1>
             </div>
-            <div id="sidenav">
+            <div id="sidenav" class="fechado">
                 <img src="images/Vector.png" onclick="sidenavClose()">
-                <a href="#">Resumo</a>
-                <a href="#">Dashboard</a>
-                <a href="#">Configurações</a>
+                <a href="#">Cadastro de transações</a>
+                <div class="separador"></div>
+                <a href="#">Limpar dados</a>
             </div>
             <div><img src="images/Shape.png" onclick="sidenavOpen()"></div>
         </header>
@@ -99,11 +99,15 @@
 
 <script>
     function sidenavOpen() {
-        document.getElementById("sidenav").style.width = "min(351px, 100vw)";
+        var element = document.getElementById("sidenav");
+        element.classList.remove("fechado");
+        document.getElementById("sidenav").className = "aberto";
     }
 
     function sidenavClose() {
-        document.getElementById("sidenav").style.width = "0px";
+        var element = document.getElementById("sidenav");
+        element.classList.remove("aberto");
+        document.getElementById("sidenav").className = "fechado";
     }
 </script>
 
