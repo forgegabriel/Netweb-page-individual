@@ -16,6 +16,36 @@ body {
     position: relative;
 }
 
+#sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow-x: hidden;
+    transition: 0.2s;
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    width: 0;
+}
+
+#sidenav img {
+    padding: 20px;
+}
+
+#sidenav a {
+    display: block;
+    padding: 8px 20px;
+    text-align: right;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+#sidenav a:hover, #sidenav a:active {
+    background-color: #c4c4c4;
+    color: black;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -51,6 +81,11 @@ header div:last-child>img {
 }
 
 /* Modificações no formulário  */
+
+form h2 {
+    display: none;
+}
+
 form [id|="tran"] {
     width: 100%;
     padding: 7px 10px;
@@ -59,7 +94,7 @@ form [id|="tran"] {
 }
 
 form label {
-    display: block;
+    display: inline-block;
     margin-bottom: 7px;
     font-size: 14px;
 }
@@ -86,6 +121,10 @@ form hr {
     text-align: center;
 }
 
+#extrato table {
+    width: 100%
+}
+
 #extrato tr {
     border-bottom: 1px solid var(--cor-detalhe);
 }
@@ -97,11 +136,20 @@ form hr {
 }
 
 #extrato tr:last-child span {
+    vertical-align: top;
+    font-size: 10px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 #extrato th:nth-child(2) {
     text-align: left;
+}
+
+#extrato td:first-child {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 0;
 }
 
 #extrato td:last-child {
@@ -115,15 +163,80 @@ form hr {
     font-size: 14px;
 }
 
-#extrato td:first-child {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 footer {
     position: absolute;
     bottom: 0;
     background-color: var(--cor-secundaria);
     height: 8px;
     width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    form {
+        padding: 0px 20px;
+        border: 1px solid var(--cor-detalhe);
+        border-radius: 4px;
+        margin: 20px 0;
+    }
+
+    form h2 {
+        display: block;
+        margin: 20px 0 11px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    form hr {
+        display: none;
+    }
+
+    form .grid {
+        display: grid;
+        grid-template-columns: 23% 50% 23%;
+        grid-column-gap: 2%;
+    }
+
+    form input[type="submit"] {
+        width: 200px;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    .espaco-vertical {
+        margin: 10px 0;
+    }
+
+    #extrato th:last-child {
+        padding-right: 10px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    form {
+        padding: 0px 10px;
+    }
+
+    form .grid {
+        display: block;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .espaco-vertical {
+        margin: 20px 0;
+    }
+
+    .corpo {
+        display: grid;
+        grid-template-columns: calc(40% - 10px) calc(60% - 10px);
+        grid-column-gap: 20px;
+    }
 }

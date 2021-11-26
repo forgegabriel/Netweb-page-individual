@@ -16,31 +16,40 @@
             <div>
                 <h1>Controle Financeiro</h1>
             </div>
-            <div><img src="images/Shape.png"></div>
+            <div id="sidenav">
+                <img src="images/Vector.png" onclick="sidenavClose()">
+                <a href="#">Resumo</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Configurações</a>
+            </div>
+            <div><img src="images/Shape.png" onclick="sidenavOpen()"></div>
         </header>
 
-        <div class="espaco-lateral">
+        <div class="espaco-lateral corpo">
 
             <form>
+                <h2>Nova transação</h2>
                 <!-- Tipo de transação -->
-                <div class="espaco-vertical">
-                    <label for="tran-tipo">Tipo de transação</label>
-                    <select id="tran-tipo" name="tran-tipo" required>
-                        <option value="tipo-compra">Compra</option>
-                        <option value="tipo-venda">Venda</option>
-                    </select>
-                </div>
+                <div class="grid">
+                    <div class="espaco-vertical">
+                        <label for="tran-tipo">Tipo de transação</label>
+                        <select id="tran-tipo" name="tran-tipo" required>
+                            <option value="tipo-compra">Compra</option>
+                            <option value="tipo-venda">Venda</option>
+                        </select>
+                    </div>
 
-                <!-- Nome da mercadoria -->
-                <div class="espaco-vertical">
-                    <label for="tran-nome">Nome da mercadoria</label>
-                    <input type="text" id="tran-nome" name="tran-nome" placeholder="Input" required>
-                </div>
+                    <!-- Nome da mercadoria -->
+                    <div class="espaco-vertical">
+                        <label for="tran-nome">Nome da mercadoria</label>
+                        <input type="text" id="tran-nome" name="tran-nome" placeholder="Input" required>
+                    </div>
 
-                <!-- Valor -->
-                <div class="espaco-vertical">
-                    <label for="tran-valor">Valor</label>
-                    <input type="number" id="tran-valor" name="tran-valor" placeholder="R$ 0,00" required>
+                    <!-- Valor -->
+                    <div class="espaco-vertical">
+                        <label for="tran-valor">Valor</label>
+                        <input type="number" id="tran-valor" name="tran-valor" placeholder="R$ 0,00" required>
+                    </div>
                 </div>
 
                 <input type="submit" class="espaco-vertical" value="Adicionar transação">
@@ -75,7 +84,7 @@
                     <tr>
                         <td></td>
                         <td>Total</td>
-                        <td>R$ 12.909,99
+                        <td>R$ 12.909,99<br>
                             <span>[lucro]</span>
                         </td>
                     </tr>
@@ -87,5 +96,15 @@
 
     <footer></footer>
 </body>
+
+<script>
+    function sidenavOpen() {
+        document.getElementById("sidenav").style.width = "min(351px, 100vw)";
+    }
+
+    function sidenavClose() {
+        document.getElementById("sidenav").style.width = "0px";
+    }
+</script>
 
 </html>
