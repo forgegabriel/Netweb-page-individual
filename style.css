@@ -12,8 +12,7 @@ body {
 }
 
 .conteudo-principal {
-    min-height: 100%;
-    position: relative;
+    height: calc(100% - 8px);
 }
 
 #sidenav {
@@ -175,8 +174,6 @@ form hr {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     background-color: var(--cor-secundaria);
     height: 8px;
     width: 100%;
