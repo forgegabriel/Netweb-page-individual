@@ -6,13 +6,18 @@
     --cor-detalhe: #979797;
 }
 
+html {
+    height: 0%;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
 .conteudo-principal {
-    min-height: calc(100% - 8px);
+    position: relative;
+    min-height: 100vh; 
 }
 
 #sidenav {
@@ -174,6 +179,8 @@ form hr {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     background-color: var(--cor-secundaria);
     height: 8px;
     width: 100%;
