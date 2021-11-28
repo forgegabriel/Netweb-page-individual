@@ -12,7 +12,7 @@ body {
 }
 
 .conteudo-principal {
-    height: calc(100% - 8px);
+    min-height: calc(100% - 8px);
 }
 
 #sidenav {
